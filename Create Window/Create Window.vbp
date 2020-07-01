@@ -1,0 +1,37 @@
+Type=Exe
+Module=WindowModule; Window.bas
+Startup="Sub Main"
+HelpFile=""
+Title="CreateWindowEx"
+ExeName32="Create Window.exe"
+Command32=""
+Name="CreateWindowExProgram"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=6
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionComments="This example program  demonstrates using the CreateWindowEx API function to create windows and controls."
+VersionCompanyName="Peter Swinkels"
+VersionFileDescription="CreateWindowEx example program."
+VersionProductName="CreateWindowEx Example"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1
