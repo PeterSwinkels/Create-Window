@@ -181,7 +181,7 @@ Dim ReturnValue As Long
       Case WM_COMMAND
          Select Case lParam
             Case ChangeButtonH
-               CheckForError SendMessageA(MainWindowH, WM_SETTEXT, CLng(0), ByVal StrPtr(GetWindowText(MainWindowH)))
+               CheckForError SendMessageA(MainWindowH, WM_SETTEXT, CLng(0), ByVal StrPtr(GetWindowText(TextBoxH)))
             Case QuitButtonH
                CheckForError SendMessageA(hwnd, WM_CLOSE, CLng(0), CLng(0))
          End Select
@@ -223,9 +223,9 @@ On Error GoTo ErrorTrap
 Dim Length As Long
 Dim Text As String
    
-   Length = CheckForError(SendMessageA(TextBoxH, WM_GETTEXTLENGTH, CLng(0), CLng(0)))
+   Length = CheckForError(SendMessageA(WindowH, WM_GETTEXTLENGTH, CLng(0), CLng(0))) + 1
    Text = String$(Length, vbNullChar)
-   CheckForError SendMessageA(TextBoxH, WM_GETTEXT, Length, ByVal StrPtr(Text))
+   CheckForError SendMessageA(WindowH, WM_GETTEXT, ByVal Length, ByVal StrPtr(Text))
    
 EndRoutine:
    GetWindowText = Text
